@@ -10,6 +10,7 @@ public class Datumi {
 
 	public static void main(String[] args) {
 		
+		String datum = "04.06.2001";
 		
 		Calendar calendar = new GregorianCalendar();
 			calendar.set(Calendar.YEAR,2020);
