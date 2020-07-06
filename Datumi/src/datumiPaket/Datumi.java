@@ -2,29 +2,21 @@ package datumiPaket;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Datumi {
 
 	public static void main(String[] args) {
 		
-		String datumIzEksela = "04/05/1997 12:25:34";
 		
+		Calendar calendar = new GregorianCalendar();
+			calendar.set(Calendar.YEAR,2020);
+			calendar.set(Calendar.MONTH, 7);
+			calendar.set(Calendar.DAY_OF_MONTH, 6);
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-		
-		Date datum = null;
-		try {
-			datum= sdf.parse(datumIzEksela);
-			System.out.println(datum);
-			
-			SimpleDateFormat zaBazu = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			System.out.println(zaBazu.format(datum));
-		} catch (ParseException e) {
-			System.out.println("Ne valja ti format!");
-		}
-		
-		
+		System.out.println("Danas je mesec: " +  calendar.get(Calendar.MONTH));
 		
 	}
 
