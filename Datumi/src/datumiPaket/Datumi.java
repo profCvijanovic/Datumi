@@ -1,23 +1,31 @@
 package datumiPaket;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Datumi {
 
 	public static void main(String[] args) {
+	
 		
-		String datum = "04.06.2001";
+		LocalDate datum = LocalDate.now();
+		LocalTime vreme = LocalTime.now();
+		System.out.println(datum);
 		
-		Calendar calendar = new GregorianCalendar();
-			calendar.set(Calendar.YEAR,2020);
-			calendar.set(Calendar.MONTH, 7);
-			calendar.set(Calendar.DAY_OF_MONTH, 6);
+		System.out.println("Godina: " + datum.getYear());
+		System.out.println("Mesec je: " + datum.getMonth());
+		System.out.println("Mesec je: " + datum.getMonthValue());
+		System.out.println("Dan je: " + datum.getDayOfMonth());
+		System.out.println("Dan u nedelji je : " + datum.getDayOfWeek());
+		System.out.println("Dan u nedelji je : " + datum.getDayOfYear());
+		System.out.println("Era:" + datum.getEra());
 		
-		System.out.println("Danas je mesec: " +  calendar.get(Calendar.MONTH));
+		
+		System.out.println("Sati je: " + vreme.getHour());
+		System.out.println("Minuta je: " + vreme.getMinute());
+		System.out.println("Sekundi je: " + vreme.getSecond());
+		
+		
 		
 	}
 
